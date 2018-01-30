@@ -1,0 +1,37 @@
+.centered{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align: center;
+}
+
+
+.forbuttononly{
+    border-color:#BDBDBD;
+    margin-top: 50px;
+    height:200px;
+    background-color:
+    rgba(255, 255, 255, 0.09);
+    font-size:150%;
+    margin-left:0px
+}
+button{
+    background-color:  rgba(255, 255, 255, 0.3);
+    border: 1px solid ;
+    border-radius: 5px;
+}
+button:hover{
+    background-color: #bdbdbd !important;
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+a{
+    cursor: pointer;
+    color:rgba(54, 54, 54, 0.479);
+}
+a:hover{
+    text-decoration: none;
+    color:rgba(54, 54, 54, 0.801);
+}
+#delete:hover{
+    color:rgb(224, 0, 0) !important;
+}

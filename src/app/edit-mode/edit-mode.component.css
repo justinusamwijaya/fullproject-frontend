@@ -1,0 +1,31 @@
+.noborder{
+    border:0px;
+}
+.image-upload > input{
+    display:none
+}
+
+.inputtype{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left:0px;
+    font-size: 20px;
+    border-bottom:1px solid #bdbdbd;
+    color:black !important;
+    background-color:rgba(255, 255, 255, 0) !important;
+}
+.inputtype:focus{
+    outline:none;
+}
+#drag img{
+ width: 300px
+}
+button{
+    background-color:  rgba(255, 255, 255, 0.3);
+    border: 1px solid ;
+    border-radius: 5px;
+}
+button:hover{
+    background-color: #bdbdbd !important;
+    color: rgba(255, 255, 255, 0.5) !important;
+}

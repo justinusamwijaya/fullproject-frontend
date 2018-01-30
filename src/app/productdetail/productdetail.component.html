@@ -1,0 +1,20 @@
+    <div class="col-xs-12 col-md-3 centered" style="position:relative;margin-left:2px;margin-right:2px; height:200px;background-color: rgba(255, 255, 255, 0.09);border:1px solid rgba(0, 0, 0, 0.3);font-size: 50px; padding:1px;">
+        
+        <img class="img-responsive" style="max-width:80% ;max-height:80%;"  src="{{ (objectz != null) ? objectz.Gambar : '' }}" alt="">
+      </div>
+  <div class=" col-xs-12 col-md-5" style="color:#bdbdbd">
+    <h1>{{ (objectz != null) ? objectz.NamaProduk : '' }}</h1> 
+    <br>
+    <h2>Description</h2>
+    <p>{{ (objectz != null) ? objectz.Deskripsi : '' }}</p>
+  </div>
+  <div class="col-xs-12 col-md-3 centered" style="float:right">
+  <div style="width:100%;color:#bdbdbd;background-color: rgba(255, 255, 255, 0.09);border:1px solid rgba(0, 0, 0, 0.3);" >
+    <h5>Uploaded by : {{ (objectz != null) ? objectz.UploaderName : '' }}</h5>
+    <div *ngIf="uplodId==name">
+      <p>You Uploaded this</p>
+      <button (click)="toeditpage()">edit</button>
+    </div>
+    <h3>IDR {{ (objectz != null) ? objectz.Harga : '' }}</h3>
+    <button (click)="addtocart()"  *ngIf="uplodId!==name" style="width:100%;font-size:15px; border-radius:0px;color:#bdbdbd;background-color: rgba(255, 255, 255, 0.09);border:1px solid rgba(0, 0, 0, 0.3);height:100px;" class="centered"><span class="glyphicon glyphicon-shopping-cart"  style="margin-right:10px;"> </span>Add to Cart</button>
+  </div>

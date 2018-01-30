@@ -1,0 +1,36 @@
+<div *ngIf="cart !== undefined;then products else noproducts"></div>
+
+
+<ng-template #noproducts>
+    <div style="text-align:center; color:#bdbdbd;">
+        <div style="font-size:150%;">
+        <p>You have not put any products anything in your cart</p>
+        </div>
+      
+        <div class="centered">
+            <button class="panel panel-default col-md-offset-1 col-md-4 button forbuttononly" (click)="toListProduct()"  style="">
+              Check out what we have
+            </button>
+        </div>
+    </div>
+  </ng-template>
+
+  <ng-template #products>
+<div class = "col-md-12" style=" height: 200px;margin-top:30px;margin-bottom: 50px;border-bottom:1px solid rgba(129, 129, 129, 0.425);" *ngFor="let item of cart">
+
+    <div class="col-md-3" style="height:100%;">
+      <img style="max-height:80%;max-width:80%;" src="{{item.Gambar}}" alt="stillnopictureyet">
+    </div>
+    <label for="">Nama Produk:</label>{{item.NamaProduk}}
+    <br>
+    <label for="">Harga:</label>{{item.Price}}
+
+    <div style = "font-size:120%;position:relative; float:right; margin-top:30px;text-align:right;">
+      <p>Quantity: {{item.Quantity}}  <span style="margin-left:30px;">Total: {{item.Quantity*item.Price}}</span> </p>
+    </div>
+    <div id="delete"  style="cursor:pointer;position:absolute;right:0%;bottom:0%; font-size:170%; color:rgba(129, 129, 129, 0.425);"><span (click)="removefromcart(item.ProductId)" class="glyphicon glyphicon-trash"></span></div>
+
+</div>
+  <button style="position:relative;float:right;margin-left: 50px;" (click)="checkout()">Check Out</button>
+ <b style="position:relative;float:right;font-size:120%;">Total Pembayaran : {{cartsum}}</b>
+</ng-template>

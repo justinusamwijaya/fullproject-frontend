@@ -1,0 +1,73 @@
+.luy:focus{
+    outline: none;
+}
+.luy:active{
+   outline:none;
+}
+.navbar-brand:hover{
+    cursor:pointer;
+}
+.defaultColor{
+    color:#a39f9f !important;
+}
+.defaultColor:hover{
+    text-decoration: none;
+    color:#6b6b6b !important;
+}
+.centered{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align: center;
+}
+.usermenu:hover{
+    background: #807f7f91 !important;
+    color:white!important;
+}
+button{
+    background-color:  rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(59, 59, 59, 0.3);
+    border-radius: 5px;
+}
+button:hover{
+    background-color: #bdbdbd !important;
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+.inputtype{
+    border-style: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left:0px;
+    font-size: 20px;
+    border-bottom:1px solid #bdbdbd;
+    color:black !important;
+    background-color:rgba(255, 255, 255, 0) !important;
+}
+.inputtype:focus{
+    outline:none;
+}
+
+.modal-content{
+    box-shadow: none !important;
+    border-radius:0px !important;
+    text-align: center;
+}
+.modal-content,.modal-header,.modal-footer{
+    border:none;
+}
+a{
+    color:rgba(54, 54, 54, 0.479);
+}
+a:hover{
+    text-decoration: none;
+    color:rgba(54, 54, 54, 0.801);
+}
+::placeholder{
+    color:rgba(255, 255, 255, 0.507);
+}
+:-ms-input-placeholder{
+    color:rgba(255, 255, 255, 0.527)
+}
+::-ms-input-placeholder{
+    color:rgba(255, 255, 255, 0.507)
+}

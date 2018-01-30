@@ -1,0 +1,85 @@
+<div class = "col-md-2 hidden-xs" style="background:rgba(255, 255, 255, 0.4); height:350px;padding:0px; ">
+  <div style="width:100%; height: 30px; background:rgba(0, 0, 0, 0.63);color:rgba(255, 255, 255, 0.664)" class="centered"><p style="margin-top:3%;">What's Poppin</p></div>
+  <div style="padding-right:15px;padding-left:15px;">
+    <ul style="list-style: none;padding:0px;padding-bottom: 30px;">
+
+        <li  class = "centered" style="height: 100px;">   <button id="topmenu" style="border:none;width:95%;height:100%;background:rgba(0, 0, 0, 0);"> <img style="max-height:80% !important;position:relative;float:left;" class="img-responsive" src="https://ecs7.tokopedia.net/img/product-1/2016/8/29/2030700/2030700_c91b050f-2750-4460-88c6-d28a41a7aec6.jpg" alt=""> Makanan Ringan</button></li>
+        <li  class = "centered" style="height: 100px;">   <button id="topmenu" style="border:none;width:95%;height:100%;background:rgba(0, 0, 0, 0);"> <img style="max-height:80% !important;position:relative;float:left;" class="img-responsive" src="https://ecs7.tokopedia.net/img/product-1/2016/8/29/2030700/2030700_c91b050f-2750-4460-88c6-d28a41a7aec6.jpg" alt=""> Makanan Ringan</button></li>        
+        <li  class = "centered" style="height: 100px;">   <button id="topmenu" style="border:none;width:95%;height:100%;background:rgba(0, 0, 0, 0);"> <img style="max-height:80% !important;position:relative;float:left;" class="img-responsive" src="https://ecs7.tokopedia.net/img/product-1/2016/8/29/2030700/2030700_c91b050f-2750-4460-88c6-d28a41a7aec6.jpg" alt=""> Makanan Ringan</button></li>  
+  
+      </ul>
+    </div>
+</div>
+
+<div class="col-md-6 centered" id="banner" style="height: 350px; background:white !important;">
+  <img src="https://rog.asus.com/media/1495956874914.jpg" style="max-height:100%; float:right; " class="img-responsive" alt="">
+
+</div>
+<div class = "col-md-4 minus" style = "background:rgba(255, 255, 255, 0);padding:0px 0px 0px 0px;margin:0%;">
+  <div style="margin-left:0.5%;background:rgba(255, 255, 255, 0.4);">
+    <ul style="list-style: none;padding:0px;padding-bottom: 30px;">
+      <li  class = "centered"><h3 style="width:95%;z-index:5;" id="toptopmenu"><span class="glyphicon glyphicon-th-list"></span> Our Menu For Today</h3></li>
+      <li  class = "centered">   <button id="topmenu" style="border:none;width:95%;height:100%;background:rgba(0, 0, 0, 0);">Makanan Ringan</button></li>
+      <li  class = "centered">   <button id="topmenu" style="border:none;width:95%;height:100%;background:rgba(0, 0, 0, 0);">Makanan Ringan</button></li>
+      <li  class = "centered">   <button id="topmenu" style="border:none;width:95%;height:100%;background:rgba(0, 0, 0, 0);">Makanan Ringan</button></li>
+      <li  class = "centered">   <button id="topmenu" style="border:none;width:95%;height:100%;background:rgba(0, 0, 0, 0);">Makanan Ringan</button></li>
+
+    </ul>
+  </div>
+</div>
+
+<div class="col-md-8" style="background:rgba(255, 255, 255, 0);padding:0px;">
+  <div  style="margin-right:0.5%;background:rgba(255, 255, 255, 0.288);margin-top: 80px;padding:1%;">
+    <div>
+      <h1>Our Currently Favorite Products</h1>
+      <div>
+        <div id="customNav1" class="owl-carousel1 owl-carousel" style="padding-left:5%;padding-right:5%;">
+          <div *ngFor="let x of unitList" style="text-align:center;" (click)="setrel();todetail(x._id)">
+          <div class="wew" style="position:relative;cursor:pointer;height: 300px;width:200px;text-align:center;border: none;
+          display: block;margin: 0 auto;"> 
+            <div class="centered div"  style="border-bottom:1px solid rgba(43, 43, 43, 0.212);">
+              <div class="moi" style="height:100%;width:120%;border-radius:4px;background:rgba(0, 0, 0, 0);position:absolute;"></div>
+              <img class="img-responsive img" style=""src="{{x.Gambar}}" alt="">
+            </div>
+          </div>
+          <p style="font-size:110%;font-weight:bold;  ">{{x.NamaProduk}}</p>
+        </div>
+          <div class="wew" routerLink="/list" (click)="setrel();todetail(x._id)"  style="cursor:pointer;height: 300px;width:100px;text-align:center;"> 
+            <button class="centered wew button" style="height:100%;width:200px;margin-top:30px;">
+                <h3>See All</h3>
+            </button>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div>
+      <h1 style ="margin-top:40px;">Check Out Our Newest Products</h1>
+      <div>
+          <div id="customNav2" class="owl-carousel2 owl-carousel" style="padding-left:5%;padding-right:5%;">
+              <div *ngFor="let x of unitList" style="text-align:center;" (click)="setrel();todetail(x._id)">
+              <div class="wew" style="position:relative;cursor:pointer;height: 300px;width:200px;text-align:center;border: none;
+              display: block;margin: 0 auto;"> 
+              <div class="centered div"  style="border-bottom:1px solid rgba(43, 43, 43, 0.212);">
+                  <div class="moi" style="height:100%;width:120%;border-radius:4px;background:rgba(0, 0, 0, 0);position:absolute;"></div>
+                  <img class="img-responsive img" style=""src="{{x.Gambar}}" alt="">
+                </div>
+              </div>
+              <p style="font-size:110%;font-weight:bold;  ">{{x.NamaProduk}}</p>
+            </div>
+              <div class="wew" routerLink="/list" (click)="setrel();todetail(x._id)"  style="cursor:pointer;height: 300px;width:100px;text-align:center;"> 
+                <button class="centered wew button" style="height:100%;width:200px;margin-top:30px;">
+                    <h3>See All</h3>
+                </button>
+                </div>
+              </div>
+    </div>
+  </div>
+  </div>
+</div>
+<div class="col-md-4" style=" background:white;margin-top: 80px;">
+  <img style ="padding:10px;" src="https://ecs7.tokopedia.net/img/cache/315x165/attachment/2018/1/1/22765891/22765891_9620fce4-8f0d-4218-982c-cba97b48295e.jpg">
+  <img style ="padding:10px;" src="https://ecs7.tokopedia.net/img/cache/315x165/attachment/2018/1/1/22765891/22765891_cacd8e4b-0369-4b6d-8c43-0c2231617d24.jpg">
+  <img style ="padding:10px;" src="https://ecs7.tokopedia.net/img/cache/315x165/attachment/2018/1/1/22765891/22765891_a596f48b-7056-4f80-ad86-3821a9c588c2.jpg">
+  <img style ="padding:10px;" src="https://ecs7.tokopedia.net/img/cache/315x165/attachment/2018/1/1/22765891/22765891_e227efbb-4c72-444b-8fd1-30ed4bccd79d.jpg">
+</div>
+

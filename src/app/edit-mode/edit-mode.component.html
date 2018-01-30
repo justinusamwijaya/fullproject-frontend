@@ -1,0 +1,11 @@
+<div style="text-align:left; color:#bdbdbd;">
+  <div style="font-size:120%; ">
+  <h1 style="font-size:200%;">Edit <span class="glyphicon glyphicon-menu-right" style="font-size:70%"></span> {{ (objectz != null) ? objectz.NamaProduk : '' }}</h1>
+  </div>
+  <form action="" #lulul="ngForm" (submit)="goedit(lulul)">
+    Nama <br> <input class="col-md-12 noborder inputtype" name="namaproduk" value = "{{ (objectz != null) ? objectz.NamaProduk : '' }}" type="text" ngModel>
+    Deskripsi <br> <input class="col-md-12 noborder inputtype" name="deskripsi" value = "{{ (objectz != null) ? objectz.Deskripsi : '' }}" type="text" ngModel>
+    Harga <br> <input class="col-md-12 noborder inputtype" name="harga" value = "{{ (objectz != null) ? objectz.Harga : '' }}" type="number" ngModel>
+    <button style="position:relative;float:right;font-size:120%;width: 60px;"type="submit">edit</button>
+  </form>
+</div>

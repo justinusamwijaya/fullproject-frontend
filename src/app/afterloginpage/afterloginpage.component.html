@@ -1,0 +1,53 @@
+
+
+<div *ngIf="checklength>0;then products else noproducts"></div>
+
+<ng-template #products>
+  <div style="text-align:left; color:#bdbdbd;">
+    <div style="font-size:120%; ">
+    <h1 style="font-size:200%;">Hi {{name}}!</h1>
+    <p>You have uploaded</p>
+
+
+    <div class = "col-md-12" style=" height: 200px;margin-top:30px;margin-bottom: 50px;border-bottom:1px solid rgba(129, 129, 129, 0.425);" *ngFor="let item of productsUploaded">
+          <div class="col-md-3" style="height:100%;">
+            <img style="max-height:80%;max-width:80%;" src="{{item.Gambar}}" alt="stillnopictureyet">
+          </div>
+          <label for="">Nama Produk:</label>{{item.NamaProduk}}
+          <br>
+          <label for="">Harga:</label>{{item.Harga}}
+
+          <div style = "font-size:120%;position:relative; float:right; margin-top:30px;text-align:right;">
+            <a routerLink="/edit/{{item._id}}"><span class="glyphicon glyphicon-edit"></span> edit</a>
+            <br><br><br><br>
+            <a id="delete"  (click)="delete(item._id)"><span class="glyphicon glyphicon-trash"></span> delete</a>
+          </div>
+
+      </div>
+    </div>
+    <button (click)="toAddProduct()">Add New Product</button>
+    <a style="position:relative;float:right;" (click)="toListProduct()">View Our Product List >>></a>
+  </div>
+</ng-template>
+
+<ng-template #noproducts>
+  <div style="text-align:center; color:#bdbdbd;">
+      <div style="font-size:150%;">
+      <h1 style="font-size:350%;">Welcome</h1>
+      <h2 style="font-size:200%;">{{name}}!</h2>
+      <br><br>
+      <p>You have not put any products in your profile</p>
+      </div>
+    
+      <div class="centered">
+    
+          <button class="panel panel-default col-md-offset-1 col-md-4 button forbuttononly" (click)="toAddProduct()"  style="">
+            Input New Products
+          </button>
+          <div class="col-md-1 centered" style="text-align:center; font-size:150%;" >or</div>
+          <button class="panel panel-default col-md-offset-1 col-md-4 button forbuttononly" (click)="toListProduct()"  style="">
+            Check out what we have
+          </button>
+      </div>
+  </div>
+</ng-template>

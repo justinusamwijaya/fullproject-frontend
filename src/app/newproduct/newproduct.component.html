@@ -1,0 +1,17 @@
+
+  <form #i="ngForm" (ngSubmit)="AddProduct(i)" action="" style="color:#bdbdbd; margin-bottom:100px;">
+    Nama Produk <br>
+    <input name="NamaProduk" class="col-md-12 noborder inputtype" type="text" ngModel>
+    Deskripsi <br>
+    <input name="Deskripsi" class="col-md-12 noborder inputtype" type="text" ngModel>
+    Harga <br>
+    <input name="Harga"class="col-md-12 noborder inputtype" type="number" ngModel>
+    Gambar <br><br>
+
+    <input class="inputfile" id="Gambar"style="" name="Gambar" (change)="fileChange($event)" type="file" multiple >
+    
+    <!-- <label for="Gambar" >Choose a file</label> -->
+
+      <button class="col-md-offset-9">Cancel</button>
+      <button type="submit" >Submit</button>
+  </form>

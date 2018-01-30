@@ -1,0 +1,25 @@
+.centered{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align: center;
+}
+.button:hover{
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    color: rgba(255, 255, 255,0.5) !important;
+}
+
+button{
+    background-color:  rgba(255, 255, 255, 0.3);
+    border: 1px solid ;
+    border-radius: 5px;
+}
+.col-md-2komaan{
+    width:24%;
+    margin-right:0.5%;
+    margin-right:0.5%
+}
+button:hover{
+    background-color: #bdbdbd !important;
+    color: rgba(255, 255, 255, 0.5) !important;
+}
